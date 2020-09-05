@@ -1,0 +1,12 @@
+#E81C2D 60%
+#F2E6E7 30%
+#F21DBD 10%
+#D61AA7 ^hover
+box-shadow: 0 18-24 40-48 -12 rgba(153,18,30,.35);
+
+#BA2426 primary
+#871A1C shadow
+#F2E6E6 second
+#CE2899 acents
+#B42386 shadow acents
+box-shadow: 0 18-24 40-48 -12 rgba(135,26,28,.35);
