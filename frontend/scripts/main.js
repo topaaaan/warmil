@@ -7,11 +7,43 @@ $(document).ready(function () {
         } else {
             $(".navbar").removeClass("mobile-bg");
         }
+
+        // menu
+        if (wScroll > $('#header').offset().top) {
+            $('.nav1').addClass('aktif');
+            $('.nav2').removeClass('aktif');
+            $('.nav3').removeClass('aktif');
+            $('.nav4').removeClass('aktif');
+            $('.aktif span').css({ "left": "20px" });
+        }
+
+        // menu
+        if (wScroll > $('#menu').offset().top - 90) {
+            $('.nav1').removeClass('aktif');
+            $('.nav2').addClass('aktif');
+            $('.nav3').removeClass('aktif');
+            $('.nav4').removeClass('aktif');
+            $('.aktif span').css({ "left": "148px" });
+        }
     });
 
     // toggle navbar
     $(".menu-btn").on('click', function () {
         $(".menu-btn").toggleClass("open");
+    });
+
+    // event pada saat link di klik
+    $('.page-scroll').on('click', function (e) {
+        // ambil isi href
+        var tujuan = $(this).attr('href');
+        // tangkap elemen yang bersangkutan
+        var elemenTujuan = $(tujuan);
+        // pindahkan scroll
+        $("html").animate({
+            scrollTop: (elemenTujuan.offset().top - 80)
+        }, 1250, 'easeInOutCubic');
+        // mematikan href
+        e.preventDefault();
     });
 
     $('.myslider').slick({
@@ -75,7 +107,4 @@ $(document).ready(function () {
         $(".tutup").css({ "transform": "translateX(0%)" });
     });
 
-    $('#oce').click(function () {
-        Swal.fire('Any fool can use a computer');
-    });
 });
