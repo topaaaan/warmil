@@ -222,6 +222,7 @@ section {
         position: relative;
         display: block;
         text-align: center;
+        margin-top: 2rem;
         h1 {
             font-size: 2.2rem;
             font-family: 'Dancing Script', cursive;
@@ -280,7 +281,7 @@ section {
                 border-radius: 20px;
                 position: relative;
                 z-index: 2;
-                margin-top: 2rem;
+                margin-top: 3rem;
                 transition: all .25s ease;
                 box-shadow: 0px 0px 0px 0px rgba($color: #BA2426, $alpha: 0.8) ;
                 &:hover {
@@ -331,13 +332,37 @@ section {
     
 }
 
-#toko {
+#location {
     background-color: #BA2426;
+    position: relative;
     svg {
         background-color: #BA2426;
-        margin-top: -12%;
+        position: relative;
         path {
             fill: #F2E6E6;
+        }
+    }
+    .container {
+        transform: translate(0, -20px);
+        .header {
+            position: relative;
+            display: block;
+            text-align: center;
+            h1 {
+                margin-bottom: 1rem;
+                font-size: 2.2rem;
+                font-family: 'Dancing Script', cursive;
+                color: #F2E6E6;
+                i {
+                    font-size: .8rem;
+                }
+            }
+        }
+    
+        .content {
+            .card {
+                background-color: #F2E6E6;
+            }
         }
     }
 }
@@ -372,6 +397,20 @@ section {
             }
         }
     }
+
+    #location {
+        .container {
+            .header {
+                h1 {
+                    margin-bottom: 2rem;
+                    font-size: 2.7rem;
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 411px) {
@@ -392,6 +431,19 @@ section {
                         h2 {
                             font-size: 1.1rem;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    #location {
+        .container {
+            .header {
+                h1 {
+                    font-size: 3.3rem;
+                    i {
+                        font-size: 1.5rem;
                     }
                 }
             }
@@ -421,6 +473,20 @@ section {
             }
         }
     }
+
+    #location {
+        .container {   
+        .header {
+            h1 {
+                font-size: 4rem;
+                i {
+                    font-size: 2rem;
+                }
+            }
+        }
+        }
+    }
+    
 }
 
 @media (min-width: 768px) {
@@ -449,10 +515,25 @@ section {
         .content {
             .con-cards {
                 .card {
+                    margin-top: 5rem;
                     .con-text {
                         h2 {
                             font-size: 2rem;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    #location {
+        .container {
+            transform: translate(0, -80px);
+            .header {
+                h1 {
+                    font-size: 4.5rem;
+                    i {
+                        font-size: 2.3rem;
                     }
                 }
             }
@@ -468,7 +549,8 @@ section {
     header {
         .myslider {
             .fieldslider {
-                background-color: #F2E6E6;
+                // background-color: #F2E6E6;
+                background-image: url(../images/background/bg-slider.png);
                 .text {
                     &:before {
                         opacity: 0;
@@ -499,6 +581,32 @@ section {
                     .con-text {
                         h2 {
                             font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #location {
+        .container{
+            transform: translate(0, -120px);
+            .header {
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+            .content {
+                .bungkus-loc {
+                    .slick-track {
+                        .slick-active {
+                            transform: scale(.9);
+                        }
+                        .slick-current {
+                            transform: scale(1);
+                        }
+                        .card-body {
+                            min-height: 10rem;
                         }
                     }
                 }
@@ -660,6 +768,11 @@ section {
                     left: 0;
                 }
             }
+        }
+    }
+    #location {
+        .container{
+            transform: translate(0, -160px);
         }
     }
  }

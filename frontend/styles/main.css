@@ -269,6 +269,7 @@ section {
   position: relative;
   display: block;
   text-align: center;
+  margin-top: 2rem;
 }
 
 #menu .header h1 {
@@ -348,7 +349,7 @@ section {
   border-radius: 20px;
   position: relative;
   z-index: 2;
-  margin-top: 2rem;
+  margin-top: 3rem;
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
   -webkit-box-shadow: 0px 0px 0px 0px rgba(186, 36, 38, 0.8);
@@ -426,17 +427,44 @@ section {
   transition: all .35s ease-out;
 }
 
-#toko {
+#location {
   background-color: #BA2426;
+  position: relative;
 }
 
-#toko svg {
+#location svg {
   background-color: #BA2426;
-  margin-top: -12%;
+  position: relative;
 }
 
-#toko svg path {
+#location svg path {
   fill: #F2E6E6;
+}
+
+#location .container {
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+}
+
+#location .container .header {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+#location .container .header h1 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-family: 'Dancing Script', cursive;
+  color: #F2E6E6;
+}
+
+#location .container .header h1 i {
+  font-size: .8rem;
+}
+
+#location .container .content .card {
+  background-color: #F2E6E6;
 }
 
 @media (min-width: 360px) {
@@ -453,6 +481,13 @@ section {
   #menu .content .con-cards .card .con-text h2 {
     font-size: .9rem;
   }
+  #location .container .header h1 {
+    margin-bottom: 2rem;
+    font-size: 2.7rem;
+  }
+  #location .container .header h1 i {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 411px) {
@@ -465,6 +500,12 @@ section {
   #menu .content .con-cards .card .con-text h2 {
     font-size: 1.1rem;
   }
+  #location .container .header h1 {
+    font-size: 3.3rem;
+  }
+  #location .container .header h1 i {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 540px) {
@@ -476,6 +517,12 @@ section {
   }
   #menu .content .con-cards .card .con-text h2 {
     font-size: 1.3rem;
+  }
+  #location .container .header h1 {
+    font-size: 4rem;
+  }
+  #location .container .header h1 i {
+    font-size: 2rem;
   }
 }
 
@@ -490,8 +537,21 @@ section {
   #menu .header h1 i {
     font-size: 2.3rem;
   }
+  #menu .content .con-cards .card {
+    margin-top: 5rem;
+  }
   #menu .content .con-cards .card .con-text h2 {
     font-size: 2rem;
+  }
+  #location .container {
+    -webkit-transform: translate(0, -80px);
+            transform: translate(0, -80px);
+  }
+  #location .container .header h1 {
+    font-size: 4.5rem;
+  }
+  #location .container .header h1 i {
+    font-size: 2.3rem;
   }
 }
 
@@ -502,7 +562,7 @@ section {
             box-shadow: 0 0 0 rgba(135, 26, 28, 0);
   }
   header .myslider .fieldslider {
-    background-color: #F2E6E6;
+    background-image: url(../images/background/bg-slider.png);
   }
   header .myslider .fieldslider .text:before {
     opacity: 0;
@@ -519,6 +579,24 @@ section {
   }
   #menu .content .con-cards .card .con-text h2 {
     font-size: 1.1rem;
+  }
+  #location .container {
+    -webkit-transform: translate(0, -120px);
+            transform: translate(0, -120px);
+  }
+  #location .container .header h1 {
+    font-size: 5rem;
+  }
+  #location .container .content .bungkus-loc .slick-track .slick-active {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  #location .container .content .bungkus-loc .slick-track .slick-current {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  #location .container .content .bungkus-loc .slick-track .card-body {
+    min-height: 10rem;
   }
 }
 
@@ -662,6 +740,10 @@ section {
   #navb ul .aktif i {
     color: #121212;
     left: 0;
+  }
+  #location .container {
+    -webkit-transform: translate(0, -160px);
+            transform: translate(0, -160px);
   }
 }
 /*# sourceMappingURL=main.css.map */

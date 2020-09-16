@@ -8,7 +8,7 @@ $(document).ready(function () {
             $(".navbar").removeClass("mobile-bg");
         }
 
-        // menu
+        // home
         if (wScroll > $('#header').offset().top) {
             $('.nav1').addClass('aktif');
             $('.nav2').removeClass('aktif');
@@ -24,6 +24,15 @@ $(document).ready(function () {
             $('.nav3').removeClass('aktif');
             $('.nav4').removeClass('aktif');
             $('.aktif span').css({ "left": "148px" });
+        }
+
+        // menu
+        if (wScroll > $('#location').offset().top + 200) {
+            $('.nav1').removeClass('aktif');
+            $('.nav2').removeClass('aktif');
+            $('.nav3').addClass('aktif');
+            $('.nav4').removeClass('aktif');
+            $('.aktif span').css({ "left": "275px" });
         }
     });
 
@@ -46,6 +55,20 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    // event pada saat location di klik
+    $('.loc-scroll').on('click', function (e) {
+        // ambil isi href
+        var tujuan = $(this).attr('href');
+        // tangkap elemen yang bersangkutan
+        var elemenTujuan = $(tujuan);
+        // pindahkan scroll
+        $("html").animate({
+            scrollTop: (elemenTujuan.offset().top + 280)
+        }, 1250, 'easeInOutCubic');
+        // mematikan href
+        e.preventDefault();
+    });
+
     $('.myslider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -59,7 +82,7 @@ $(document).ready(function () {
 
     $('.pic-menu').slick({
         slidesToShow: 7,
-        slidesToScroll: 1,
+        slidesToScroll: 6,
         infinite: false,
         autoplay: false,
         arrows: true,
@@ -68,28 +91,52 @@ $(document).ready(function () {
                 breakpoint: 1025,
                 settings: {
                     arrows: false,
-                    slidesToShow: 6
+                    slidesToShow: 6,
+                    slidesToScroll: 5
                 }
             },
             {
                 breakpoint: 769,
                 settings: {
                     arrows: false,
-                    slidesToShow: 5
+                    slidesToShow: 5,
+                    slidesToScroll: 4
                 }
             },
             {
                 breakpoint: 420,
                 settings: {
                     arrows: false,
-                    slidesToShow: 4
+                    slidesToShow: 4,
+                    slidesToScroll: 3
                 }
             },
             {
                 breakpoint: 376,
                 settings: {
                     arrows: false,
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+    });
+
+    $('.bungkus-loc').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
                 }
             }
         ]
