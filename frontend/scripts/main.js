@@ -26,13 +26,22 @@ $(document).ready(function () {
             $('.aktif span').css({ "left": "148px" });
         }
 
-        // menu
+        // location
         if (wScroll > $('#location').offset().top + 200) {
             $('.nav1').removeClass('aktif');
             $('.nav2').removeClass('aktif');
             $('.nav3').addClass('aktif');
             $('.nav4').removeClass('aktif');
             $('.aktif span').css({ "left": "275px" });
+        }
+
+        // location
+        if (wScroll > $('#about').offset().top - 100) {
+            $('.nav1').removeClass('aktif');
+            $('.nav2').removeClass('aktif');
+            $('.nav3').removeClass('aktif');
+            $('.nav4').addClass('aktif');
+            $('.aktif span').css({ "left": "400px" });
         }
     });
 
@@ -153,5 +162,11 @@ $(document).ready(function () {
         // $('.po-button').removeClass('besar');
         $(".tutup").css({ "transform": "translateX(0%)" });
     });
+
+    // initialize the map on the "map" div with a given center and zoom
+    /*var map = L.map('map', {
+        center: [51.505, -0.09],
+        zoom: 13
+    });*/
 
 });
